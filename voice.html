@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body { font-family: sans-serif; padding: 16px; }
+      button { width: 100%; padding: 12px; font-size: 16px; margin-top: 8px; cursor: pointer; }
+      #progress { color: #666; font-size: 13px; margin-bottom: 0; }
+      #question { margin: 4px 0 12px; }
+      #heard { font-size: 16px; }
+      #status { color: #666; font-size: 14px; }
+      .opt { font-size: 13px; color: #444; margin: 8px 0; display: block; }
+      #review { display: none; }
+      .row { margin-bottom: 8px; }
+      .row label { display: block; font-size: 12px; color: #444; }
+      .row input { width: 100%; padding: 6px; box-sizing: border-box; }
+      #doneBtn { background: #2e7d32; color: white; border: none; border-radius: 6px; }
+    </style>
+  </head>
+  <body>
+    <h3>Voice mode</h3>
+    <label class="opt" for="language">Choose your preferred language first</label>
+    <select id="language">
+  <option value="" selected disabled>Select a language</option>
+  <option value="en-IN">English (India)</option>
+  <option value="hi-IN">हिन्दी</option>
+</select>
+    <label class="opt"><input type="checkbox" id="confirmOpt" /> Confirm each answer (slower)</label>
+    <button id="readBtn">Read form aloud</button>
+    <button id="startBtn">Start</button>
+
+    <p id="progress"></p>
+    <h2 id="question"></h2>
+    <p id="heard"></p>
+    <p id="status">Press Start</p>
+
+    <div id="review">
+      <div id="reviewRows"></div>
+      <button id="refillBtn">Fill again</button>
+      <button id="doneBtn">Done</button>
+    </div>
+
+    <script src="voice.js"></script>
+  </body>
+</html>
