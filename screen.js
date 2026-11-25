@@ -12,6 +12,7 @@
  * extension popup context (which has network access).
  */
 
+
 "use strict";
 
 // ── DOM refs ────────────────────────────────────────────────────────────────
